@@ -1,0 +1,29 @@
+mat-toolbar {
+    background: #004a9f;
+    color: white;
+}
+mat-selection-list {
+    max-height: 150px;
+    overflow: auto;
+  }
+
+  .has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.mat-card:not([class*='mat-elevation-z']) {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 1), 0 1px 1px 0 rgba(0, 0, 0, 1),
+      0 1px 3px 0 rgba(0, 0, 0, 1);
+  }

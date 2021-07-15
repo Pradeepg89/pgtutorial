@@ -1,0 +1,676 @@
+<mat-toolbar class="mat-elevation-z8">
+  P & G WriteBack
+</mat-toolbar>
+<div class="main-panel">
+  <div *ngFor="let sliceitem of slicerArray; let i = index">
+    <div *ngIf="i % 2 == 0">
+      <div class="row m-2">
+
+        <ng-container  *ngFor="let item of sliceitem['slicedata'];let j= index">
+          <div class="col-lg-3 col-md-3  h-20">
+            <mat-card>
+                <mat-card-title>{{item.name}}</mat-card-title>
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+              </div>
+            <mat-selection-list #shoes >
+              <mat-list-option checkboxPosition="before" *ngFor="let subitem of item['sdata']  | LockFilter: query" 
+                               [value]="shoe">
+                {{subitem.name}}
+              </mat-list-option> 
+            </mat-selection-list> 
+            </mat-card>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    </div>
+    <mat-divider ></mat-divider>
+<p class="text-center mt-2 text-success">Select the component and click update scope go to Analysis View</p>
+<mat-divider ></mat-divider>
+<div *ngFor="let sliceitem of slicerArray; let i = index">
+  <div *ngIf="i % 2 != 0">
+    <div class="row m-2">
+
+      <ng-container  *ngFor="let item of sliceitem['slicedata'];let j= index">
+        <div class="col-lg-2 col-md-2  h-20">
+          <mat-card>
+              <mat-card-title>{{item.name}}</mat-card-title>
+          <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+            </div>
+          <mat-selection-list #shoes >
+            <mat-list-option checkboxPosition="before" *ngFor="let subitem of item['sdata']  | LockFilter: query" 
+                             [value]="shoe">
+              {{subitem.name}}
+            </mat-list-option> 
+          </mat-selection-list> 
+          </mat-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+<!-- <mat-toolbar class="mat-elevation-z8">
+  P & G WriteBack
+</mat-toolbar>
+<div class="main-panel">
+
+
+
+
+
+  
+<div *ngFor="let sliceitem of slicerArray; let i = index">
+<div class="row m-2">
+
+    <ng-container  *ngFor="let item of sliceitem['slicedata'];let j= index">
+      <div class="col-lg-3 col-md-3  h-20">
+        <mat-card>
+            <mat-card-title>{{item.name}}</mat-card-title>
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+          </div>
+        <mat-selection-list #shoes >
+          <mat-list-option checkboxPosition="before" *ngFor="let subitem of item['sdata']  | LockFilter: query" 
+                           [value]="shoe">
+            {{subitem.name}}
+          </mat-list-option> 
+        </mat-selection-list> 
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<mat-divider ></mat-divider>
+<p class="text-center mt-2 text-success">Select the component and click update scope go to Analysis View</p>
+<mat-divider ></mat-divider>
+
+<div *ngFor="let sliceitem of slicerArray;">
+  <div class="row m-2">
+      <ng-container  *ngFor="let item of sliceitem['slicedata'];let j= index">
+        <div class="col-lg-3 col-md-3  h-20">
+          <mat-card>
+              <mat-card-title>{{item.name}}</mat-card-title>
+          <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+            </div>
+          <mat-selection-list #shoes >
+            <mat-list-option checkboxPosition="before" *ngFor="let subitem of item['sdata']  | LockFilter: query" 
+                             [value]="shoe">
+              {{subitem.name}}
+            </mat-list-option> 
+          </mat-selection-list> 
+          </mat-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-------------old data starts here-->
+<!-- <mat-toolbar class="mat-elevation-z8">
+    P & G WriteBack
+</mat-toolbar>
+<div class="main-panel">
+    <div class="">
+        <div class="row p-3">
+              <div class="col-lg-3 col-md-3  h-20">
+                <mat-card>
+                    <mat-card-title>Geo Level</mat-card-title>
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                  </div>
+                <mat-selection-list #shoes >
+                  <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                   [value]="shoe">
+                    {{shoe}}
+                  </mat-list-option> 
+                </mat-selection-list> 
+                </mat-card>
+              </div>
+              <div class="col-lg-3 col-md-3  h-20">
+                <mat-card>
+                    <mat-card-title>SubSector</mat-card-title>
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                  </div>
+                <mat-selection-list #shoes >
+                  <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                   [value]="shoe">
+                    {{shoe}}
+                  </mat-list-option> 
+                </mat-selection-list> 
+                </mat-card>
+              </div>
+              <div class="col-lg-3 col-md-3  mh-20">
+                <mat-card>
+                    <mat-card-title>Market</mat-card-title>
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                  </div>
+                <mat-selection-list #shoes >
+                  <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                   [value]="shoe">
+                    {{shoe}}
+                  </mat-list-option> 
+                </mat-selection-list> 
+                </mat-card>
+              </div>
+        </div>
+
+          </div>
+          <mat-divider ></mat-divider>
+          <p class="text-center mt-2 text-success">Select the component and click update scope go to Analysis View</p>
+          <mat-divider ></mat-divider>
+          <div class="">
+            <div class="row p-3">
+                <div class="col-lg-2 col-md-3 mb-2 h-20">
+                  <mat-card>
+                      <mat-card-title>Geo Level</mat-card-title>
+                  <div class="form-group has-search">
+                      <span class="fa fa-search form-control-feedback"></span>
+                      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                    </div>
+                  <mat-selection-list #shoes >
+                    <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                     [value]="shoe">
+                      {{shoe}}
+                    </mat-list-option> 
+                  </mat-selection-list> 
+                  </mat-card>
+                </div>
+                <div class="col-lg-2 col-md-2 mb-3  h-20">
+                  <mat-card>
+                      <mat-card-title>SubSector</mat-card-title>
+                  <div class="form-group has-search">
+                      <span class="fa fa-search form-control-feedback"></span>
+                      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                    </div>
+                  <mat-selection-list #shoes >
+                    <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                     [value]="shoe">
+                      {{shoe}}
+                    </mat-list-option> 
+                  </mat-selection-list> 
+                  </mat-card>
+                </div>
+                <div class="col-lg-2 col-md-2 mb-3 mh-20">
+                  <mat-card>
+                      <mat-card-title>Market</mat-card-title>
+                  <div class="form-group has-search">
+                      <span class="fa fa-search form-control-feedback"></span>
+                      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                    </div>
+                  <mat-selection-list #shoes >
+                    <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                     [value]="shoe">
+                      {{shoe}}
+                    </mat-list-option> 
+                  </mat-selection-list> 
+                  </mat-card>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>
+                  <div class="col-lg-2 col-md-3  mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>
+                  <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>
+                  <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>       <div class="col-lg-2 col-md-3 mb-2 h-20">
+                    <mat-card>
+                        <mat-card-title>Geo Level</mat-card-title>
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+                      </div>
+                    <mat-selection-list #shoes >
+                      <mat-list-option checkboxPosition="before" *ngFor="let shoe of typesOfShoes  | LockFilter: query" 
+                                       [value]="shoe">
+                        {{shoe}}
+                      </mat-list-option> 
+                    </mat-selection-list> 
+                    </mat-card>
+                  </div>
+          </div>
+          </div>
+        </div> 
+ -->

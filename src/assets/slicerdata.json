@@ -1,0 +1,356 @@
+{
+"slicerarray": [{
+  "name":"section one",
+  "slicedata":[
+    {
+      "name":"Geo Level",
+      "grouptype":"radio_box",
+      "sdata":[{
+        "id":1,
+        "name":"Minor Country"
+      },{
+        "id":2,
+        "name":"Reporting Country"
+      },{
+        "id":3,
+        "name":"SMO"
+      }
+        ]
+    },{
+      "name":"SubSector",
+      "grouptype":"radio_box",
+      "sdata":[{
+        "id":1,
+        "name":"Appliances"
+      },{
+        "id":2,
+        "name":"Baby Care"
+      },{
+        "id":3,
+        "name":"Fabric Care"
+      },{
+        "id":4,
+        "name":"Family Care"
+      },{
+        "id":5,
+        "name":"Feminine Care"
+      }
+        ]
+    },{
+      "name":"Market",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"ALGERIA"
+      },{
+        "id":2,
+        "name":"ANDORRA"
+      },{
+        "id":3,
+        "name":"ANGOLA"
+      },{
+        "id":4,
+        "name":"ARGENTINA"
+      }
+        ]
+    }
+    ]
+},{
+  "name":"section two",
+  "slicedata":[
+    {
+      "name":"Category",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"Adult Incontinence"
+      },{
+        "id":2,
+        "name":"Feminine Care"
+      }
+        ]
+    },{
+      "name":"Brand",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"Always Adult Incontine"
+      },{
+        "id":2,
+        "name":"Always Feminie Care"
+      },{
+        "id":3,
+        "name":"Tampax Feminie Care"
+      }
+        ]
+    },{
+      "name":"Attribute 1",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"HEVADINCT"
+      },{
+        "id":2,
+        "name":"LIGHTADINC"
+      },{
+        "id":3,
+        "name":"LINERS"
+      },{
+        "id":4,
+        "name":"MENSTRLCUP"
+      }]
+    },{
+      "name":"Attribute 2",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"HEAVY"
+      },{
+        "id":2,
+        "name":"LIGHTPAD"
+      },{
+        "id":3,
+        "name":"LINERS"
+      },{
+        "id":4,
+        "name":"MIX"
+      }]
+    },{
+      "name":"Attribute 3",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"CUP"
+      },{
+        "id":2,
+        "name":"EXTRALONG"
+      },{
+        "id":3,
+        "name":"L1"
+      },{
+        "id":4,
+        "name":"L2"
+      }]
+    },{
+      "name":"Attribute 4",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"6-9GR_14MM"
+      },{
+        "id":2,
+        "name":"9-12GR"
+      },{
+        "id":3,
+        "name":"FORMFILMCS"
+      },{
+        "id":4,
+        "name":"FORMFILMPL"
+      }]
+    },{
+      "name":"CSUP Indicator",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"C"
+      },{
+        "id":2,
+        "name":"S"
+      }]
+    },{
+      "name":"Channel",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"CASH & CARRY"
+      },{
+        "id":2,
+        "name":"DISCOUNTER-NATIONAL"
+      },{
+        "id":3,
+        "name":"DISCOUNTER-PRIVATE"
+      },{
+        "id":4,
+        "name":"DRUGSTORE - NO RX"
+      }]
+    },{
+      "name":"Customer",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"ALDI GERMANY"
+      },{
+        "id":2,
+        "name":"AMAZON GERMANY"
+      },{
+        "id":3,
+        "name":"BHD"
+      },{
+        "id":4,
+        "name":"DANSK SUPERMARKET"
+      }]
+    },{
+      "name":"SFU Life Cycle Status",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"Active"
+      },{
+        "id":2,
+        "name":"Before Active"
+      },{
+        "id":3,
+        "name":"Remmant & Historical"
+      }
+       ]
+    },{
+      "name":"Local FPC Status",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"Active"
+      },{
+        "id":2,
+        "name":"Before Active"
+      },{
+        "id":3,
+        "name":"Remnant & Historical"
+      }]
+    },{
+      "name":"Profit Center",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"EU FM FEM CARE BASE"
+      },{
+        "id":2,
+        "name":"EU FM FEM EX JV"
+      },{
+        "id":3,
+        "name":"EU FM FEM EXPORTS"
+      }]
+    },{
+      "name":"Attribute 5",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"ANGELLOVE"
+      },{
+        "id":2,
+        "name":"DEODORANT"
+      },{
+        "id":3,
+        "name":"DNW"
+      },{
+        "id":4,
+        "name":"HEAVY"
+      }]
+    },{
+      "name":"Attribute 6",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"0.5X"
+      },{
+        "id":2,
+        "name":"1X/REG"
+      },{
+        "id":3,
+        "name":"CLEAR"
+      },{
+        "id":4,
+        "name":"LGTSCN"
+      }]
+    },{
+      "name":"Attribute 7",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"1.2x"
+      },{
+        "id":2,
+        "name":"1.5x/REG"
+      },{
+        "id":3,
+        "name":"1.7X"
+      },{
+        "id":4,
+        "name":"1.8X"
+      }]
+    },{
+      "name":"Attribute 8",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"0.5X"
+      },{
+        "id":2,
+        "name":"0.8X"
+      },{
+        "id":3,
+        "name":"1.8X"
+      },{
+        "id":4,
+        "name":"1X/REG"
+      }]
+    },{
+      "name":"Segmentation",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"A"
+      },{
+        "id":2,
+        "name":"C"
+      },{
+        "id":3,
+        "name":"D"
+      },{
+        "id":4,
+        "name":"E"
+      }]
+    },{
+      "name":"GTIN",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"4015400001"
+      },{
+        "id":2,
+        "name":"4015400002"
+      },{
+        "id":3,
+        "name":"4015400003"
+      },{
+        "id":4,
+        "name":"4015400004"
+      }]
+    },{
+      "name":"Profit Indicator",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"High"
+      },{
+        "id":2,
+        "name":"Low"
+      },{
+        "id":3,
+        "name":"Med"
+      }]
+    },{
+      "name":"G11 Segment Differeent",
+      "grouptype":"check_box",
+      "sdata":[{
+        "id":1,
+        "name":"0"
+      },{
+        "id":2,
+        "name":"1"
+      }]
+    }
+    ]
+}
+    
+  ]
+}
